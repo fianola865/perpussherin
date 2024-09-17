@@ -9,14 +9,14 @@
 
     <!-- Card Body -->
     <div class="card-body">
-        <form action="/peminjaman/edit/<?= isset($peminjaman['PeminjamanID']) ? $peminjaman['PeminjamanID'] : '' ?>" method="post">
+        <form action="/peminjaman/edit/<?= isset($peminjaman[0]['PeminjamanID']) ? $peminjaman[0]['PeminjamanID'] : 'Data tidak ditemukan' ?>" method="post">
             <div class="form-group">
                 <label for="userID" style="color: #007bff;">UserID</label>
-                <input type="text" name="UserID" id="UserID" class="form-control" value="<?= isset ($peminjaman['UserID']) ?>">
+                <input type="text" name="UserID" id="UserID" class="form-control" value="<?= isset ($peminjaman[0]['UserID']) ?>">
             </div>
             <div class="form-group">
                 <label for="BukuID" style="color: #007bff;">BukuID</label>
-                <input type="text" name="BukuID" id="BukuID" class="form-control" value="<?= isset ($peminjaman['BukuID']) ?>">
+                <input type="text" name="BukuID" id="BukuID" class="form-control" value="<?= isset ($peminjaman[0]['BukuID']) ?>">
             </div>
             
             <button type="submit" class="btn btn-success">Simpan</button>

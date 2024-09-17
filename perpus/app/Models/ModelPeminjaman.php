@@ -16,7 +16,7 @@ class ModelPeminjaman extends Model
 
     public function getNyileh()
     {
-        return $this->select('peminjaman.*, Username as user_name, Judul as buku_title')
+        return $this->select('peminjaman.*, user.Username AS user_name, buku.Judul AS buku_title')
                     ->join('user', 'user.UserID = peminjaman.UserID')
                     ->join('buku', 'buku.BukuID = peminjaman.BukuID')
                     ->findAll();
